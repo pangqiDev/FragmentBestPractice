@@ -1,0 +1,11 @@
+碎片和活动进行通信
+在碎片中通过调用getActivity()方法，获得和当前碎片相关联的活动
+
+layout和layout-sw600dp中的activity_main.xml分别为手机和平板的主页布局
+其中，layout-sw600dp/activity_main.xml中含有一个叫news_content_layout的帧布局，以此来判断是手机、还是平板布局
+
+NewsContentFragment 动态加载news_content_frag布局（新闻标题和内容）
+NewsContentActivity news_content_fragment
+news_title_frag显示新闻列表的布局，使用RecyclerView
+news_item 其子项的布局
+NewsTitleFragment 展示新闻列表的碎片，动态加载news_title_frag布局，通过RecyclerView展示新闻列表
